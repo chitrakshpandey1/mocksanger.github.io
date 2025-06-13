@@ -4,6 +4,7 @@
   --ut-dark: #333;
   --ut-light: #fff;
   --ut-gray: #f2f2f2;
+  --link-hover: #922e00;
 }
 
 * {
@@ -31,6 +32,23 @@ header {
   justify-content: space-between;
   align-items: center;
   color: white;
+  flex-wrap: wrap;
+}
+
+.topnav a {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: var(--ut-orange);
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid var(--ut-orange);
+  transition: background 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+  background-color: var(--ut-orange);
+  color: white;
 }
 
 .toggle-dark {
@@ -40,25 +58,16 @@ header {
   background: #fff;
   color: var(--ut-orange);
   border-radius: 5px;
+  margin-top: 0.5rem;
 }
 
 .sidebar {
-  width: 220px;
-  background-color: white;
-  padding: 1rem;
-  position: fixed;
-  top: 60px;
-  bottom: 0;
-  border-right: 1px solid #ddd;
-}
-
-.sidebar.dark-mode {
-  background-color: #292929;
+  width: 0px;
+  display: none;
 }
 
 .main {
-  margin-left: 240px;
-  padding: 2rem;
+  margin: 2rem;
 }
 
 .section {
